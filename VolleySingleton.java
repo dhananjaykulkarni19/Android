@@ -1,3 +1,11 @@
+////////////////////////////////////////////
+/* Android Volley : Singleton class for android volley that creates only one instance of connection
+ * Author: Dhananjay Kulkarni
+ * Email ID: dhananjaykulkarni19@gmail.com
+ */
+///////////////////////////////////////////
+
+
 package com.example
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
