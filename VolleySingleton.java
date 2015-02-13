@@ -17,6 +17,7 @@ public class VolleySingleton extends Application{
 
 	public static final String TAG = "VolleyTag";
 	private RequestQueue  mRequestQueue;
+	private ImageLoader mImageLoader;
 	private static VolleySingleton mRequestInstance;
 	
 	
@@ -38,6 +39,16 @@ public class VolleySingleton extends Application{
 			mRequestInstance.mRequestQueue = Volley.newRequestQueue(getApplicationContext());
 		}
 			return mRequestInstance.mRequestQueue;
+	}
+	
+	public ImageLoader getImageLoader(){
+		getRequestQueue();
+		
+		if(mImageLoader == null){
+			mImageLoader = new ImageLoader(this.mRequestQueue, new LruBitmapCache());
+		}
+		
+		return this.mImageLoader;
 	}
 	
 	public <T> void addToRequestQueue(Request<T> req){
