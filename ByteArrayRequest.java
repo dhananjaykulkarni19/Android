@@ -1,3 +1,11 @@
+////////////////////////////////////////////
+/* ByteArray Request using android volley.
+ * Author: Dhananjay Kulkarni
+ * Email ID: dhananjaykulkarni19@gmail.com
+ */
+///////////////////////////////////////////
+
+
 package com.example.utils;
 
 import com.android.volley.NetworkResponse;
